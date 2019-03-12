@@ -1,0 +1,5 @@
+#include <stdexcept>
+#include <iostream>
+using namespace std;
+
+long int fact(int);
