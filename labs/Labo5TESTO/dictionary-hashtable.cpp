@@ -39,7 +39,7 @@ int h2(Key s) // funzione di hash che somma il codice ascii di ogni carattere ne
 /****************************************************************/
 int h3(Key s) // funzione di hash diversa da h1 ed h2, che progettate e implementate voi seguendo qualche criterio che vi sembra ragionevole
 {
- return (int(s[i]) + int(s[i+1])) %  tableDim;
+ return (int(s[0]) + int(s[1]));
 }
 
 /****************************************************************/
@@ -52,7 +52,7 @@ int h(Key s)
 
 
 /****************************************************************/
-/*              FUNZIONE NON IMPLEMENTATA                       */
+/*              FUNZIONE IMPLEMENTATA                           */
 /****************************************************************/
 Error dict::deleteElem(const Key k, Dictionary& s)
 {
@@ -82,7 +82,7 @@ Error dict::deleteElem(const Key k, Dictionary& s)
 
 
 /****************************************************************/
-/*              FUNZIONE NON IMPLEMENTATA                       */
+/*              FUNZIONE IMPLEMENTATA                           */
 /****************************************************************/
 Value dict::search(const Key k, const Dictionary& s)
 {
@@ -101,12 +101,12 @@ Value dict::search(const Key k, const Dictionary& s)
 
 
 /****************************************************************/
-/*              FUNZIONE NON IMPLEMENTATA                       */
+/*              FUNZIONE IMPLEMENTATA                           */
 /****************************************************************/
 Error dict::insertElem(const Key k, const Value v,  Dictionary& s)
 {
   Error e = FAIL;
-  if(dict::search(k,s) != emptyValue){
+  if(dict::search(k,s) == emptyValue){
     int a = h(k);
     cell* aux = new cell;
     aux->elem.value = v;
