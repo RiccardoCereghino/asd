@@ -4,8 +4,20 @@
 //
 // Per usare l'implementazione del dizionario basata su vettore ordinato:
 //
-// g++ -std=c++11 -Wall -DUSE_BINARY_TREE dictionary-binary-tree.cpp string-utility.cpp dictionary-main.cpp
+// g++ -std=c++11 -Wall -DUSE_ORDERED_VECTOR dictionary-orderedvector.cpp string-utility.cpp dictionary-main.cpp
 //
+// Per usare l'implementazione del dizionario basata su lista doppiamente
+// collegata con sentinella e ordinata:
+//
+// g++ -std=c++11 -Wall -DUSE_ORDERED_LIST dictionary-doublylinkedlist.cpp string-utility.cpp dictionary-main.cpp
+//
+// Per usare l'implementazione del dizionario basata su tabella hash:
+//
+// g++ -std=c++11 -Wall -DUSE_HASH_TABLE dictionary-hashtable.cpp string-utility.cpp dictionary-main.cpp
+//
+// Per usare l'implementazione del dizionario basata su bst:
+//
+// g++ -std=c++11 -Wall -DUSE_BST dictionary-binary-tree.cpp string-utility.cpp dictionary-main.cpp
 //
 /////////////////////////////////////////////////////////////////////////////
 
@@ -116,7 +128,6 @@ while (true)
    case 'f':
    cin >> i;
    if (i<0 || i>=maxreg) {cout << "\nIndice fuori range\n"; break;}
-   cout << "EEEEEE";
    print(v[i]);
    break;
 
